@@ -23,24 +23,14 @@ public class VideoGameController implements Runnable {
     System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
   }
 
-//  private final Scalar ORANGE_LOW = new Scalar(0, 153, 220);
-//  private final Scalar ORANGE_HIGH = new Scalar(17, 255, 255);
-//  private VideoProcessor orangeFilter = new VideoProcessor(ORANGE_LOW, ORANGE_HIGH);
-
   private ControllerConfiguration config1;
   private ControllerConfiguration config2;
-
-//  private final Scalar GREEN_LOW = new Scalar(62, 112, 0);
-//  private final Scalar GREEN_HIGH = new Scalar(77, 255, 255);
-//  private VideoProcessor greenFilter = new VideoProcessor(GREEN_LOW, GREEN_HIGH);
 
   private VideoJFrame imgOrgFrame = new VideoJFrame("Original");
   private Game game;
 
   public VideoGameController(Game game) {
     this.game = game;
-    config1 = new ControllerConfiguration(new Scalar(0, 153, 220), new Scalar(17, 255, 255));
-    config2 = new ControllerConfiguration(new Scalar(62, 112, 0), new Scalar(77, 255, 255));
   }
 
   @Override
